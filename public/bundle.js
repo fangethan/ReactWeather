@@ -26174,7 +26174,25 @@
 
 	var Weather = React.createClass({
 	    displayName: "Weather",
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            location: "Miami",
+	            temperature: 88
+	        };
+	    },
+
+	    handleSearch: function handleSearch(location) {
+	        this.setState({
+	            location: location,
+	            temperature: 23
+	        });
+	    },
+
 	    render: function render() {
+	        var location = this.state.location;
+	        var temperature = this.state.temperature;
+
 	        return React.createElement(
 	            "div",
 	            null,
@@ -26183,8 +26201,8 @@
 	                null,
 	                "Weather page"
 	            ),
-	            React.createElement(WeatherForm, null),
-	            React.createElement(WeatherMessage, null)
+	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
+	            React.createElement(WeatherMessage, { location: location, temperature: temperature })
 	        );
 	    }
 	});
@@ -26201,14 +26219,27 @@
 
 	var WeatherForm = React.createClass({
 	    displayName: "WeatherForm",
+
+	    onFormSubmit: function onFormSubmit(e) {
+	        e.preventDefault();
+	        // api id b033f1a6906e208563565acfe60cf05a
+
+	        var location = this.refs.location.value;
+
+	        if (location.length > 0) {
+	            this.refs.location.value = "";
+	            this.props.onSearch(location);
+	        }
+	    },
+
 	    render: function render() {
 	        return React.createElement(
 	            "div",
 	            null,
 	            React.createElement(
 	                "form",
-	                null,
-	                React.createElement("input", { type: "text" }),
+	                { onSubmit: this.onFormSubmit },
+	                React.createElement("input", { type: "text", ref: "location", placeholder: "Enter the city name" }),
 	                React.createElement(
 	                    "button",
 	                    null,
@@ -26232,13 +26263,19 @@
 	var WeatherMessage = React.createClass({
 	    displayName: "WeatherMessage",
 	    render: function render() {
+	        var location = this.props.location;
+	        var temperature = this.props.temperature;
+
 	        return React.createElement(
 	            "div",
 	            null,
 	            React.createElement(
 	                "h2",
 	                null,
-	                "WeatherMessage page"
+	                location,
+	                " is currently ",
+	                temperature,
+	                " degrees"
 	            )
 	        );
 	    }
