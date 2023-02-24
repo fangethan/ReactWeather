@@ -14,4 +14,12 @@ var WeatherMessage = React.createClass({
     }
 });
 
+var WeatherMessage = ({temp, location}) => {
+    return (
+        <div>
+            <h2>{location} is currently {temp} degrees</h2>     
+        </div>
+    );
+}
+
 module.exports = WeatherMessage;
