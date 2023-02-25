@@ -4,7 +4,7 @@ var CountryCodeTable = require("./CountryCodeTable");
 var About = (props) => {
     return (
         <div>
-            <h1 className="text-center">About</h1>
+            <h1 className="text-center page-title">About</h1>
             <p>This is a react weather app where user can retrieve the current weather of a certain location</p>     
             <p>Here are some of the tools I use</p>
             <ul>
