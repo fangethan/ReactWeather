@@ -26326,7 +26326,7 @@
 	            if (isLoading) {
 	                return React.createElement(
 	                    "h3",
-	                    null,
+	                    { className: "text-center" },
 	                    "Fetching Weather..."
 	                );
 	            } else if (temp && location) {
@@ -26339,8 +26339,8 @@
 	            null,
 	            React.createElement(
 	                "h2",
-	                null,
-	                "Weather page"
+	                { className: "text-center" },
+	                "Get Weather"
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            renderMessage()
@@ -26382,7 +26382,7 @@
 	                React.createElement("input", { type: "text", ref: "location", placeholder: "Enter the city name" }),
 	                React.createElement(
 	                    "button",
-	                    null,
+	                    { className: "button expanded hollow" },
 	                    "Get Weather"
 	                )
 	            )
@@ -27574,7 +27574,7 @@
 	        null,
 	        React.createElement(
 	            "h1",
-	            { className: "text-centered" },
+	            { className: "text-center" },
 	            "About"
 	        ),
 	        React.createElement(
@@ -27623,7 +27623,7 @@
 	        null,
 	        React.createElement(
 	            "h1",
-	            { className: "text-centered" },
+	            { className: "text-center" },
 	            "Examples page"
 	        ),
 	        React.createElement(
@@ -28031,7 +28031,7 @@
 	            { "class": "view-content" },
 	            React.createElement(
 	                  "h1",
-	                  null,
+	                  { className: "text-center" },
 	                  "Country Code Table"
 	            ),
 	            React.createElement(

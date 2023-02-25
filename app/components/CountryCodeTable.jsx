@@ -3,7 +3,7 @@ var React = require("react");
 var CountryCodeTable = (props) => {
     return (
         <div class="view-content">
-            <h1>Country Code Table</h1>
+            <h1 className="text-center">Country Code Table</h1>
       <div class="table-responsive">
 <table class="views-table cols-4 table table-hover table-striped">
         <thead>
