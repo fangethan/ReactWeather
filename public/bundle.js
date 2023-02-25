@@ -107,6 +107,7 @@
 	var Weather = __webpack_require__(249);
 	var About = __webpack_require__(270);
 	var Examples = __webpack_require__(271);
+	var CountryCode = __webpack_require__(276);
 
 	__webpack_require__(272);
 	$(document).foundation();
@@ -119,6 +120,7 @@
 	    { path: '/', component: Main },
 	    React.createElement(Route, { path: 'about', component: About }),
 	    React.createElement(Route, { path: 'examples', component: Examples }),
+	    React.createElement(Route, { path: 'countryCode', component: CountryCode }),
 	    React.createElement(IndexRoute, { component: Weather })
 	  )
 	), document.getElementById('app'));
@@ -26237,6 +26239,15 @@
 	                            { to: "/examples", activeClassName: "active", activeStyle: { fontWeight: "bold" } },
 	                            "Examples"
 	                        )
+	                    ),
+	                    React.createElement(
+	                        "li",
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: "/countryCode", activeClassName: "active", activeStyle: { fontWeight: "bold" } },
+	                            "Country Code Table"
+	                        )
 	                    )
 	                )
 	            ),
@@ -27555,15 +27566,40 @@
 	"use strict";
 
 	var React = __webpack_require__(8);
+	var CountryCodeTable = __webpack_require__(276);
 
 	var About = function About(props) {
 	    return React.createElement(
 	        "div",
 	        null,
 	        React.createElement(
-	            "h2",
+	            "h1",
+	            { className: "text-centered" },
+	            "About"
+	        ),
+	        React.createElement(
+	            "p",
 	            null,
-	            "About page"
+	            "This is a react weather app where user can retrieve the current weather of a certain location"
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "Here are some of the tools I use"
+	        ),
+	        React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "https://openweathermap.org/" },
+	                    "Open Weather Map"
+	                ),
+	                " I use open weather map to to search for weather data"
+	            )
 	        )
 	    );
 	};
@@ -27980,6 +28016,7363 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ }),
+/* 276 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(8);
+
+	var CountryCodeTable = function CountryCodeTable(props) {
+	      return React.createElement(
+	            "div",
+	            { "class": "view-content" },
+	            React.createElement(
+	                  "h1",
+	                  null,
+	                  "Country Code Table"
+	            ),
+	            React.createElement(
+	                  "div",
+	                  { "class": "table-responsive" },
+	                  React.createElement(
+	                        "table",
+	                        { "class": "views-table cols-4 table table-hover table-striped" },
+	                        React.createElement(
+	                              "thead",
+	                              null,
+	                              React.createElement(
+	                                    "tr",
+	                                    null,
+	                                    React.createElement(
+	                                          "th",
+	                                          { "class": "views-field views-field-name active" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/countries-by-region?field_region_tid=All&name=&order=name&sort=desc", title: "sort by Country", "class": "active" },
+	                                                "Country",
+	                                                React.createElement("span", { "class": "icon-after icon glyphicon glyphicon-chevron-up", "data-toggle": "tooltip", "data-placement": "bottom", title: "", "aria-hidden": "true", "data-original-title": "sort descending" })
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "th",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/countries-by-region?field_region_tid=All&name=&order=field_country_code&sort=asc", title: "sort by Country Code", "class": "active" },
+	                                                "Country Code"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "th",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/countries-by-region?field_region_tid=All&name=&order=field_region&sort=asc", title: "sort by Region", "class": "active" },
+	                                                "Region"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "th",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "Region Code          "
+	                                    )
+	                              )
+	                        ),
+	                        React.createElement(
+	                              "tbody",
+	                              null,
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd views-row-first" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Afghanistan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Albania          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Algeria          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "American Samoa          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Andorra          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Angola          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Anguilla          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Antarctica          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AQ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/antarctica", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Antarctica"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ANT          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Antigua and Barbuda          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Argentina          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Armenia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Aruba          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Australia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Austria          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Azerbaijan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bahamas, The          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bahrain          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bangladesh          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Barbados          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BB          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Belarus          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Belgium          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Belize          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Benin          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BJ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bermuda          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/north-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "North America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "NAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bhutan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bolivia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bonaire          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BQ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bosnia and Herzegovina          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Botswana          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bouvet Island          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/antarctica", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Antarctica"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ANT          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Brazil          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "British Indian Ocean Territory          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "British Virgin Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Brunei          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Bulgaria          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Burkina Faso          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Burundi          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cambodia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cameroon          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Canada          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/north-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "North America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "NAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cape Verde          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cayman Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Central African Republic          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Chad          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Chile          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "China          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Christmas Island          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CX          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cocos (Keeling) Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Colombia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Comoros          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cook Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Costa Rica          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cote D'Ivoire          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Croatia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cuba          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Curacao          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Cyprus          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Czech Republic          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Democratic Republic of the Congo          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Denmark          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Djibouti          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DJ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Dominica          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Dominican Republic          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Ecuador          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "EC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Egypt          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "EG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "El Salvador          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Equatorial Guinea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GQ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Eritrea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ER          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Estonia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "EE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Ethiopia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ET          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Falkland Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Faroe Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Federated States of Micronesia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Fiji          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FJ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Finland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "France          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "FR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "French Guiana          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "French Polynesia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "French Southern Territories          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Gabon          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Gambia, The          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Georgia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Germany          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "DE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Ghana          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Gibraltar          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Greece          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Greenland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/arctic", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Arctic"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ARC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Grenada          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guadeloupe          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guam          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guatemala          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guernsey          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guinea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guinea-Bissau          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Guyana          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Haiti          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Heard Island and McDonald Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/antarctica", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Antarctica"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ANT          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Honduras          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Hong Kong          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Hungary          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "HU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Iceland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/arctic", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Arctic"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ARC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "India          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "India          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Indonesia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ID          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Iran          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Iraq          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IQ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Ireland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Isle of Man          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Israel          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Italy          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "IT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Jamaica          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "JM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Japan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "JP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Jersey          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "JE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Jordan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "JO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kazakhstan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kenya          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kiribati          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kosovo          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "XK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kuwait          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Kyrgyzstan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Laos          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Latvia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Lebanon          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LB          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Lesotho          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Liberia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Libya          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Liechtenstein          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Lithuania          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Luxembourg          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Macau          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Macedonia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Madagascar          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Malawi          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Malaysia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Maldives          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mali          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ML          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Malta          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Marshall Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Martinique          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MQ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mauritania          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mauritius          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mayotte          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "YT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mexico          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MX          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/north-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "North America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "NAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Moldova          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Monaco          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mongolia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Montenegro          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ME          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Montserrat          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Morocco          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Mozambique          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Myanmar          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Namibia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Nauru          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Nepal          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Netherlands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "New Caledonia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "New Zealand          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Nicaragua          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Niger          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Nigeria          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Niue          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Norfolk Island          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "North Korea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Northern Mariana Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Norway          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "NO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Oman          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "OM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Pakistan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Palau          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Palestine          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Panama          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Papua New Guinea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Paraguay          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Peru          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Philippines          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Pitcairn Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Poland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Portugal          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Puerto Rico          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Qatar          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "QA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Republic of the Congo          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Reunion          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "RE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Romania          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "RO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Russia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "RU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Rwanda          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "RW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Barthelemy          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "BL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Helena          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Kitts and Nevis          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Lucia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Martin          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "MF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Pierre and Miquelon          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "PM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/north-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "North America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "NAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saint Vincent and the Grenadines          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Samoa          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "WS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "San Marino          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sao Tome and Principe          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ST          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Saudi Arabia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Senegal          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Serbia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "RS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Seychelles          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sierra Leone          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Singapore          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sint Maarten          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SX          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Slovakia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Slovenia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Solomon Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SB          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Somalia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "South Africa          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ZA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "South Georgia and South Sandwich Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "South Korea          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "KR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "South Sudan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SS          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Spain          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ES          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Spratly Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SP          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sri Lanka          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "LK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sudan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SD          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Suriname          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Svalbard And Jan Mayen          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SJ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Swaziland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Sweden          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Switzerland          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "CH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Syria          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "SY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Taiwan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tajikistan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TJ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tanzania          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Thailand          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Timor-Leste          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TL          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Togo          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tokelau          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TK          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tonga          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TO          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Trinidad and Tobago          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TT          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tunisia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Turkey          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TR          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Turkmenistan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Turks and Caicos Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TC          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Tuvalu          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "TV          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Uganda          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "UG          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Ukraine          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "UA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "United Arab Emirates          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "AE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "United Kingdom          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "GB          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "United States          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "US          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/north-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "North America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "NAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "United States Minor Outlying Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "UM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Uruguay          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "UY          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "US Virgin Islands          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VI          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/central-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Central America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "CAC          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Uzbekistan          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "UZ          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Vanuatu          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VU          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Vatican City          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VA          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/europe", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Europe"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "EUR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Venezuela          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/south-america", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "South America"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "SAM          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Vietnam          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "VN          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/asia", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Asia"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "ASI          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Wallis and Futuna          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "WF          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/oceania", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Oceania"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "OCN          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Western Sahara          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "EH          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Yemen          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "YE          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/middle-east", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Middle East"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "MEA          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "even" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Zambia          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ZM          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              ),
+	                              React.createElement(
+	                                    "tr",
+	                                    { "class": "odd views-row-last" },
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-name active" },
+	                                          "Zimbabwe          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-country-code" },
+	                                          "ZW          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region" },
+	                                          React.createElement(
+	                                                "a",
+	                                                { href: "/regions/africa", "typeof": "skos:Concept", property: "rdfs:label skos:prefLabel", datatype: "" },
+	                                                "Africa"
+	                                          ),
+	                                          "          "
+	                                    ),
+	                                    React.createElement(
+	                                          "td",
+	                                          { "class": "views-field views-field-field-region-code" },
+	                                          "AFR          "
+	                                    )
+	                              )
+	                        )
+	                  )
+	            )
+	      );
+	};
+
+	module.exports = CountryCodeTable;
 
 /***/ })
 /******/ ]);

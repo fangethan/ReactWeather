@@ -5,6 +5,7 @@ var Main = require("Main");
 var Weather = require("Weather");
 var About = require("About");
 var Examples = require("Examples");
+var CountryCode = require("./components/CountryCodeTable");
 
 require("style!css!foundation-sites/dist/foundation.min.css")
 $(document).foundation();
@@ -14,6 +15,7 @@ ReactDOM.render(
     <Route path="/" component={Main} >
       <Route path="about" component={About} />
       <Route path="examples" component={Examples} />
+      <Route path="countryCode" component={CountryCode} />
       <IndexRoute component={Weather} />
     </Route>
   </Router>,
