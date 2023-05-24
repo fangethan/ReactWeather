@@ -11,7 +11,7 @@ App gets the weather temperature from https://openweathermap.org/ .\
 Upcoming additions:.\
 Button to convert to fahrenheit.\
 Show more than just current degrees, more than 7 days etc.\
-Map of the world.
+Map of the world through Google Maps
 
 ## Available Scripts
 
